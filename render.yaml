@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ktas-smart-er
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: DATABASE_URL
+        value: postgresql://neondb_owner:npg_j6zJdBfnSFA4@ep-green-moon-a1d9qeah-pooler.ap-southeast-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+      - key: PORT
+        value: 10000
+      - key: NODE_VERSION
+        value: 20.0.0
