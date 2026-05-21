@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KTAS Smart ER - Full Scale System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+        body { font-family: 'Pretendard', sans-serif; letter-spacing: -0.02em; }
+
+        .ktas-1 { color: #E53E3E; } .bg-ktas-1 { background-color: #E53E3E; }
+        .ktas-2 { color: #ED8936; } .bg-ktas-2 { background-color: #ED8936; }
+        .ktas-3 { color: #F6E05E; } .bg-ktas-3 { background-color: #F6E05E; }
+        .ktas-4 { color: #48BB78; } .bg-ktas-4 { background-color: #48BB78; }
+        .ktas-5 { color: #4299E1; } .bg-ktas-5 { background-color: #4299E1; }
+
+        @keyframes pulse-custom {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.3); }
+        }
+        .animate-pulse-custom { animation: pulse-custom 2s infinite; }
+
+        .assign-glow { animation: border-glow 1.5s infinite; }
+        @keyframes border-glow {
+            0%, 100% { border-color: #3B82F6; box-shadow: 0 0 5px rgba(59,130,246,0.1); }
+            50% { border-color: #60A5FA; box-shadow: 0 0 20px rgba(59,130,246,0.4); }
+        }
+    </style>
+</head>
+<body class="bg-[#F8FAFC]">
+    <div id="root"></div>
+
+    <!-- 유틸 함수 및 데이터 -->
+    <script src="/src/utils.js"></script>
+    <script src="/src/data.js"></script>
+
+    <!-- React 컴포넌트 (Babel 트랜스파일) -->
+    <script type="text/babel" src="/src/components/LucideIcon.jsx"></script>
+    <script type="text/babel" src="/src/components/NavItem.jsx"></script>
+    <script type="text/babel" src="/src/components/Dashboard.jsx"></script>
+    <script type="text/babel" src="/src/components/Triage.jsx"></script>
+    <script type="text/babel" src="/src/components/BedMap.jsx"></script>
+    <script type="text/babel" src="/src/App.jsx"></script>
+</body>
+</html>
